@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Strona O CSS</title>
+
+    <link rel="stylesheet" href="css/fontello.css"/>
+
+    <style>
+        body {
+            background-color: #1a1a1a;
+            font-family: sans-serif;
+            color: #ffffff;
+        }
+    
+        h1 {
+            text-align: center;
+            text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+        }
+    
+        a {
+            text-decoration: none;
+            color: #54bbeb;
+        }
+
+        main {
+            margin: auto 20px;
+        }
+
+        article {
+            border: 2px dashed #2f90c9;
+            font-size: 23px;
+            text-align: justify;
+            padding: 35px;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+       <h1><a href="index.html">Kaskadowość Arkuszy Stylów<i class="icon-back"></i></a></h1>
+    </header>
+    <main>
+        <section>
+            <article>
+                <p>Kaskadowość stylów określa pierwszeństwo w oddziaływaniu na te same elementy strony stylów z różnych źródeł. Na przykład: na naszej stronie używamy zewnętrznego arkusza stylów, deklaracji stylów w nagłówku strony, a także stylów typu inline, przy czym dotyczą one formatowania dokładnie tego samego elementu (np. kroju czcionki). Co się stanie w takim przypadku? Czy nie powstaną konflikty? A może komputer się "zawiesi"? Nic z tych rzeczy! A to właśnie ze względu na kaskadowość. To od niej wzięły swoją nazwę style: CSS - (ang. Cascading Style Sheets) Kaskadowe Arkusze Stylów. <br /> <br />
+
+                        Jeśli w dokumencie znajduje się kilka źródeł stylów, pierwszeństwo mają te, które znajdują się "bliżej" formatowanego elementu. Oddziaływanie stylów z arkuszy zewnętrznych może być modyfikowane przez style zdefiniowane w nagłówku dokumentu, to z kolei może być zmieniane przez style zdefiniowane bezpośrednio w ciele dokumentu (inline). Zatem priorytet ważności stylów (pierwszeństwo) wyglądałby tak: <br /> <br />
+                        
+                        Styl lokalny (inline) <br />
+                        Rozciąganie stylu (SPAN) <br />
+                        Wydzielone bloki (DIV) <br />
+                        Wewnętrzny arkusz stylów <br />
+                        Import stylów do wewnętrznego arkusza <br />
+                        Zewnętrzny arkusz stylów <br />
+                        Import stylów do zewnętrznego arkusza <br />
+                        (Atrybuty prezentacyjne HTML - np. align="...", bgcolor="...", color="...", height="...", width="..." i inne) <br /> <br />
+                        Style o wyższym priorytecie ważności (na początku listy) mają pierwszeństwo w modyfikowaniu elementów dokumentu. Style niżej w hierarchii mogą zmienić formatowanie jakiegoś elementu, tylko jeśli style o wyższym priorytecie nie dotyczą tego konkretnego elementu. Na szczególną uwagę zasługuje również fakt, że style CSS z dowolnego źródła zawsze są ważniejsze niż atrybuty prezentacyjne przypisane elementom bezpośrednio w kodzie HTML, mimo iż wydawać by się mogło, że powinna tutaj zachodzić zasada taka jak w przypadku stylu lokalnego. <br /> <br />
+                        
+                        Kaskadowość stylów pozwala zatem pracować z kilkoma źródłami stylów, bez obawy o wystąpienie konfliktów. Takie rozwiązanie jest bardzo wygodne, ponieważ możemy np. zdefiniować ogólny wygląd naszego serwisu w zewnętrznym arkuszu i dodatkowo zmienić nieco wybrane strony poprzez wewnętrzny arkusz, a jeśli zajdzie konieczność zmodyfikować pojedyncze elementy za pomocą stylu lokalnego.</p>
+            </article>
+        </section>
+    </main>
+
+</body>
+</html>

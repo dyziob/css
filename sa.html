@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Strona O CSS</title>
+
+    <link rel="stylesheet" href="strona.css" />
+    <link rel="stylesheet" href="css/fontello.css" />
+
+</head>
+<body>
+    <header>
+        <h1><a class="seh" href="index.html">Selektory Atrybutu<i class="icon-back"></i></a></h1>
+    </header>
+    <main>
+        <section>
+            <article>
+                <p>Selektor typu atrybutu odszukuje każdy element HTML, który posiada atrybut HTML podanego przez nas typu. <br />
+                    <br />
+                    Selektor typu atrybutu tworzymy za pomocą nawiasu kwadratowego [ ], w którym należy umieścić nazwę interesującego
+                    nas atrybutu HTML. <br /> <br />
+                    Przykład: <br /> <br />
+                    
+                    [title] { color:red; } <br /> <br />
+            
+                    [title]
+                    do każdego elementu HTML, który posiada atrybut title <br /> <br />
+
+                    &lt;div title="opis"&gt; <br />
+                        tekst znajdujący się w zawartości tego elementu "div" jest koloru czerwonego, ponieważ ten element HTML
+                        posiada atrybut "title" <br />
+                    &lt;/div&gt;
+            
+                    <div title="opis">
+                        tekst znajdujący się w zawartości tego elementu "div" jest koloru czerwonego, ponieważ ten element HTML
+                        posiada atrybut "title"
+                    </div> <br />
+
+                    &lt;p id="lipiec" title="lato"> <br />
+                            tekst znajdujący się w zawartości tego elementu "p" jest koloru czerwonego, ponieważ jednym z atrybutów tego
+                            elementu HTML jest atrybut "title" <br />
+                        &lt;/p&gt;
+                    
+                    <p id="lipiec" title="lato">
+                        tekst znajdujący się w zawartości tego elementu "p" jest koloru czerwonego, ponieważ jednym z atrybutów tego
+                        elementu HTML jest atrybut "title"
+                    </p>
+
+                    &lt;div class="czerwiec"> <br />
+                            tekst znajdujący się w zawartości tego elementu "div" nie jest koloru czerwonego, ponieważ ten element HTML
+                            nie posiada atrybutu "title" <br />
+                        &lt;/div&gt; <br /> <br />
+            
+                    <div class="czerwiec">
+                        tekst znajdujący się w zawartości tego elementu "div" nie jest koloru czerwonego, ponieważ ten element HTML
+                        nie posiada atrybutu "title"
+                    </div>
+                </p>
+            </article>
+        </section>
+    </main>
+
+</body>
+</html>

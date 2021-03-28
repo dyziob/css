@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Strona O CSS</title>
+
+    <link rel="stylesheet" href="strona.css" />
+    <link rel="stylesheet" href="css/fontello.css"/>
+
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">Umieszczanie stylów w dokumencie<i class="icon-back"></i></a></h1>
+    </header>
+    <main>
+        <section>
+            <h2>Metoda 'inline'</h2>
+            <article>
+                  <p>Polega na bezpośrednim przypisaniu stylu do elementu (X)HTML poprzez atrybut style
+                      <xmp class="normal">
+                        <p style="color:blue;">Akapit na niebiesko</p> 
+                        </xmp>
+                    Metoda raczej niezalecana, gdyż powoduje wymieszanie w kodzie strony treści i wyglądu w sposób niewiele różniący się od starych metod. Należy stosować wyłącznie wtedy, gdy poniższe sposoby okażą się niewystarczające bądź niedostępne. </p>
+            </article>            
+            <h2>Arkusz zagnieżdżony</h2>
+            <article>
+                  <p>Jest to arkusz umieszczony wewnątrz znacznika style w części nagłówkowej strony (wewnątrz znacznika &lt;head&gt;).<xmp class="normal"> 
+                        <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+                            <html>
+                                <head>
+                                <title>Przykład działania CSS</title>
+                                <style type="text/css">                 <!-- początek stylu zagnieżdżonego... -->
+                                p {
+                                    font-weight:bold;
+                                }
+                                </style>                                <!-- ...a tu jego koniec -->
+                                </head>
+                                <body>
+                                <p>Paragraf pogrubiony przez arkusz zagnieżdżony.</p>
+                                </body>
+                            </html> 
+                </xmp>
+                Arkusz ten definiuje style dla elementów w całym dokumencie. </p>
+            </article>            
+            <h2>Arkusz zewnętrzny</h2>
+            <article>
+                  <p>Najbardziej zalecany. Polega na umieszczeniu definicji stylów w oddzielnym pliku o rozszerzeniu .css, a w dokumencie go używającym umieszczeniu instrukcji importującej w części nagłówkowej strony. W HTML arkusz zewnętrzny jest dołączany przez element &lt;link&gt;. Posiada on trzy atrybuty: rel informuje przeglądarkę o rodzaju linkowanego zasobu, type wskazuje rodzaj arkusza stylu. Atrybut href zawiera adres URL arkusza. <xmp class="normal">
+                        <head>
+                            <title>Przykład działania CSS</title>
+                            <link rel="stylesheet" type="text/css" href="styl.css" />
+                        </head> 
+                    </xmp>
+                    Innym, nowszym sposobem jest skorzystanie z dyrektywy @import w zagnieżdżonym arkuszu:
+                    <xmp class="normal">
+                        <style type="text/css">
+                            @import url('styl.css');
+                            /* pozostałe atrybuty */
+                        </style>
+                    </xmp>
+                    Zaletą takiego rozwiązania jest kompletne oddzielenie kodu zawartości od wyglądu. Ponadto
+                    przypisanie jednego arkusza do wielu dokumentów oznacza łatwiejszą kontrolę nad wyglądem całości
+                    serwisu. Wystarczy zmodyfikować jeden plik .css a znajdzie to odbicie we wszystkich dokumentach w
+                    których jest dołączony.
+                
+                </p>
+            </article>       
+        </section>
+        
+    </main>
+    
+</body>
+</html>

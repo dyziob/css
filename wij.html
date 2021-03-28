@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Strona O CSS</title>
+
+    <style type="text/css">
+        @import url('strona.css');
+        @import url('css/fontello.css');
+
+        a {
+            color: rgb(53, 132, 156);
+        }
+        
+        article {
+            border-radius: 4%;
+            border: 1ex solid white;
+        }
+
+        p {
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1 class="naglowek"><a href="index.html">Wartości I Jednostki<i class="icon-back"></i></a></h1>
+    </header>
+    <main>
+        <section>
+            <article>
+                <p>
+                    Musimy zapoznać się również z wartościami jakimi możemy posługiwać się w języku CSS. <br />
+                
+                    Przykładowo, dla właściwości text-align mamy z góry ustalone wartości, jakie możemy wybrać: <br /> <br />
+                
+                    left - użyta wraz z właściwością text-align wyrówna tekst do lewego marginesu elementu. <br /> <br />
+                    right - użyta wraz z właściwością text-align wyrówna tekst do prawego marginesu elementu. <br /> <br />
+                    center - użyta wraz z właściwością text-align wyśrodkuje tekst w elemencie. <br /> <br />
+                    justify - użyta wraz z właściwością text-align wyrówna tekst do obu marginesów elementu (lewego i prawego). <br /> <br />
+                    Niektóre właściwości CSS oczekują od nas podania większej liczby wartości. Zazwyczaj każdą taką wartość należy
+                    oddzielić od drugiej spacją. Na przykład dla właściwości border można podać trzy wartości, oddzielone od siebie
+                    spacją, czyli 1px solid black. <br /> <br />
+                
+                    Wyjaśnienie zapisu: 1px solid black <br /> <br />
+                
+                    solid - dla właściwości border oznacza styl obramowania, oprócz niej mamy do wyboru dziewięć innych wartości
+                    (double, dotted, dashed, groove, ridge, inset, outset, hidden, none). <br />
+                    black - dla właściwości border oznacza kolor obramowania, oprócz niej mamy do wyboru bardzo dużą liczbę różnych
+                    kolorów, którymi zajmiemy się w następnej części tego kursu CSS. <br />
+                    1px - dla właściwości border oznacza wartość szerokości obramowania, po prostu należy podać liczbę wraz z wybraną
+                    przez nas jednostką CSS, dlatego przyszedł czas na omówienie dostępnych jednostek CSS. <br /> <br />
+                
+                    Osoba początkująca z reguły będzie posługiwać się jednostką px, czyli pikselami. Nie jest to żadnym błędem, a nawet
+                    jest to zalecane w wielu wypadkach, w wielu właściwościach CSS. Jednak warto poznać czym są jednostki relatywne i co
+                    je odróżnia od innych jednostek, które występują w języku CSS, ponieważ umiejętne wykorzystanie jednostek
+                    relatywnych może dodać naszej stronie internetowej, nowej, lepszej jakości. <br /> <br />
+                
+                    Czasami w regułach CSS możemy zauważyć, że niektóre właściwości CSS są zapisane za pomocą wartości 1em, 2.5em, 2ex,
+                    4ex, 80%, 150% itp. <br />
+                </p>
+            </article>
+        </section>
+    </main>
+
+</body>
+</html>
